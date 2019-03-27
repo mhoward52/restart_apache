@@ -27,7 +27,7 @@ COMMAND="$2"
 
 if [ $# -ne 2 ]
 then 
-    echo "ERROR: $0 requires two parameters {virtual-host} {restart|reload}"
+    echo -e "\e[1;5mERROR: \e[0m$0 requires two parameters \e[4m{virtual-host}\e[24m \e[4m{restart|reload}\e[24m"
     exit 1
 fi
 
@@ -44,7 +44,7 @@ sudo service apache2 "$COMMAND"
 sudo a2ensite "$CONFIG"
 sudo service apache2 "$COMMAND"
 else
-    echo "ERROR: $COMMAND is an invalid service command {restart|reload}"
+    echo -e "ERROR: $COMMAND is an invalid service command \e[1;7m{restart|reload}\e[0m"
     exit 1
 fi
 
