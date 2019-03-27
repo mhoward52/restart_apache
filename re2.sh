@@ -44,7 +44,7 @@ sudo service apache2 "$COMMAND"
 sudo a2ensite "$CONFIG"
 sudo service apache2 "$COMMAND"
 else
-    echo -e "ERROR: $COMMAND is an invalid service command \e[1;7m{restart|reload}\e[0m"
+    echo -e "\e[1;5mERROR: \e[0m$COMMAND is an invalid service command \e[1;7m{restart|reload}\e[0m"
     exit 1
 fi
 
